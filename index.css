@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    height: 100%;
+  }
+  
+/* Animazione complessa con profondità */
+@keyframes entrata {
+    0% {
+      opacity: 0;
+      transform: translateY(100px) scale(0.8) rotateX(-90deg);
+      letter-spacing: -10px;
+    }
+    20% {
+      opacity: 0.5;
+      transform: translateY(50px) scale(1) rotateX(-45deg);
+      letter-spacing: 0;
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(-10px) scale(1.05) rotateX(10deg);
+      letter-spacing: 5px;
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(5px) scale(1) rotateX(-5deg);
+      letter-spacing: 2px;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateX(0deg);
+      letter-spacing: 0;
+    }
+  }
+  
+  /* Stile aggiornato del titolo */
+  .titolo {
+    display: flex; /* Per allineare il contenuto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15vw;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Per un impatto visivo forte */
+    font-style: normal;
+    animation: entrata 5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Effetto elasticità */
+    transform-origin: top; /* Punto di profondità */
+  }
+  
+ 
+  /* From Uiverse.io by ryota1231 */ 
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: lightblue;
+    border-radius: 100px;
+    font-weight: 600;
+    color: #061c58;
+    box-shadow: 0 0 0 2px #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #1f387e;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #7ec6ca;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #1f387e;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgb(11, 38, 117);
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  .position{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; 
+  }
+  
